@@ -23,9 +23,11 @@ return new class extends Migration
             $table->text('description')->nullable();
 
             $table->decimal('price', 10, 2)->default(0);
-            
+
+            $table->unsignedBigInteger('category_id')->nullable();
+
             $table->foreign('category_id')->references('id')->on('categories')->nullOnDelete();
-            
+
             $table->timestamps();
         });
     }

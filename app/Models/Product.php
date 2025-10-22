@@ -15,7 +15,7 @@ class Product extends Model
 
     protected $casts = [
         'price' => 'decimal:2',
-        'stock_status' => StockStatus::class . ':default',
+        'stock_status' => StockStatus::class,
     ];
 
     public function tags()
